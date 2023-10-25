@@ -1,17 +1,17 @@
 package javaPractice;
 
-class SingleTonPattern {
+class SingleTonPattern2 {
 
-	private static SingleTonPattern instance = null;
+	private static SingleTonPattern2 instance = null;
 
-	private SingleTonPattern() {
+	private SingleTonPattern2() {
 
 	}
 
-	public static SingleTonPattern getInstance() {
+	public static SingleTonPattern2 getInstance() {
 
 		if (instance == null) {
-			instance = new SingleTonPattern();
+			instance = new SingleTonPattern2();
 		}
 
 		return instance;
@@ -23,9 +23,9 @@ class SingleTonPattern {
 public class CallSingleTonClassInstance2 {
 	public static void main(String[] args) {
 
-		SingleTonPattern obj1 = SingleTonPattern.getInstance();
-		SingleTonPattern obj2 = SingleTonPattern.getInstance();
-		SingleTonPattern obj3 = SingleTonPattern.getInstance();
+		SingleTonPattern2 obj1 = SingleTonPattern2.getInstance();
+		SingleTonPattern2 obj2 = SingleTonPattern2.getInstance();
+		SingleTonPattern2 obj3 = SingleTonPattern2.getInstance();
 
 		System.out.println(obj1 == obj2);
 		System.out.println(obj2 == obj3);
